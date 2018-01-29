@@ -13,14 +13,18 @@
 
 #ifndef QUANTA_H
 #define QUANTA_H
+#include <iostream>
+using namespace std;
 
 class Quanta {
 public:
-    Quanta();
+    Quanta(unsigned short int);
     Quanta(const Quanta& orig);
     virtual ~Quanta();
+    bool setThreadCount(unsigned short int);
 private:
-    int parseConfig();
+    unsigned short int threads = 0;
+    unsigned short int parseConfig();
 };
 
 #endif /* QUANTA_H */

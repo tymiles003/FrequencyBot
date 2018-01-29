@@ -21,17 +21,16 @@ using namespace std;
  * @return true-false boolean integer.
  */
 int main(int argc, char *argv[]) {
-    
-    unsigned int concurrentThreads = std::thread::hardware_concurrency();
+    unsigned short int threads = thread::hardware_concurrency();
+    Quanta QuantaBot(threads);
     /*
      * If the count is less than the amount of expected arguments 
      * Throw an error to the application user.
      */
-    if (argc < 2) {
+    if (argc < 1) {
         cout << "You need to specify the location of the configuration file when starting QuantaBot.";
     } else {
-        Quanta Bot;
-    }    
+        QuantaBot.parseConfig(file);
+    }
     return 0;
 }
-

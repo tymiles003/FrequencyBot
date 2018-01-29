@@ -28,11 +28,12 @@ __|     \ \                    / /     |__
  * Created on January 27, 2018, 11:50 PM
  */
 
-#include <iostream>
 #include "Quanta.h"
 
-Quanta::Quanta() {
-
+Quanta::Quanta(unsigned short int threads) {
+    if (this->setThreadCount(threads)) {
+        cout << "New QuantaBot Instantiated...";
+    }
 }
 
 Quanta::Quanta(const Quanta& orig) {
@@ -41,7 +42,17 @@ Quanta::Quanta(const Quanta& orig) {
 Quanta::~Quanta() {
 }
 
-int Quanta::parseConfig() {
+bool Quanta::setThreadCount(unsigned short int threads) {
+    if (threads > 0) {
+        this->threads = threads;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+unsigned short int Quanta::parseConfig() {
+    cout << this->threads;
     return 0;
 }
 
