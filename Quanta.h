@@ -14,6 +14,8 @@
 #ifndef QUANTA_H
 #define QUANTA_H
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 class Quanta {
@@ -22,9 +24,11 @@ public:
     Quanta(const Quanta& orig);
     virtual ~Quanta();
     bool setThreadCount(unsigned short int);
+    unsigned short int parseConfig(char * filename);
 private:
     unsigned short int threads = 0;
-    unsigned short int parseConfig();
+    string configFile;
+    
 };
 
 #endif /* QUANTA_H */

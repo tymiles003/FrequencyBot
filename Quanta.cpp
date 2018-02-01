@@ -22,7 +22,7 @@ __|     \ \                    / /     |__
      \  \ \ \/||.||.||.||.||\/ / /  /
       \_ \ \  ||.||.||.||.||  / / _/
         \ \   ||.||.||.||.||   / /
-         \_   ||_||_||_||_||   _/
+         \_   ||_||_||_||_||   _/   Welcome to Paradise.
            \     ........     /
  * QuantaBot
  * Created on January 27, 2018, 11:50 PM
@@ -51,8 +51,8 @@ bool Quanta::setThreadCount(unsigned short int threads) {
     }
 }
 
-unsigned short int Quanta::parseConfig() {
-    cout << this->threads;
+unsigned short int Quanta::parseConfig(char * filename) {
+    this->configFile = filename;
     return 0;
 }
 

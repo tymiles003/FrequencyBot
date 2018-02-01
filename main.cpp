@@ -6,22 +6,27 @@
  */
 
 #include <cstdlib>
+#include <string.h>
+#include <ctype.h>
 #include <iostream>
 #include <fstream>
 #include <thread>
 #include "Quanta.h"
 
 using namespace std;
+char configFile[] = "QuantaBot.conf";
 
 /*
  * Handle all the arguments and commands passed upon initialization 
  */
-void argumentHandler(unsigned int argc, char ** argv[]) {
-    cout << "Here in the handler" << endl;
-    for (unsigned int i = 1; i < argc; i++) {
-        cout << i << endl;
-        cout << argv[i] << endl;
+int argumentHandler(unsigned int argc, char * argv[]) {
+    unsigned int sentinel = 0;
+    for (unsigned int i = 0; i < argc; i++) {
+        if (strcmp(argv[i], configFile) == 0) {
+            sentinel = i;
+        }
     }
+    return sentinel;
 }
 
 /*
@@ -31,7 +36,7 @@ void argumentHandler(unsigned int argc, char ** argv[]) {
  * @argv location of configuration file.
  * @return true-false boolean integer.
  */
-int main(unsigned int argc, char ** argv[]) {
+int main(unsigned int argc, char * argv[]) {
     unsigned short int threads = thread::hardware_concurrency();
     Quanta QuantaBot(threads);
     /*
@@ -39,10 +44,15 @@ int main(unsigned int argc, char ** argv[]) {
      * Throw an error to the application user.
      */
     if (argc < 1) {
-        cout << "@minimum please specify a conf file path to spawn QuantaBot.";
+        std::cout << "@minimum please specify a conf file path to spawn QuantaBot.";
     } else {
-        //QuantaBot.parseConfig(file);
-        argumentHandler(argc, argv);
+        /*
+         * If we get a legit command to spool a bot - do it.
+         */
+        unsigned int result = argumentHandler(argc, argv);
+        if (result) {
+            QuantaBot.parseConfig(argv[result]);
+        }
     }
     return 0;
 }
