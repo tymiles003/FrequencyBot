@@ -5,8 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Coinbase.h</itemPath>
+      <itemPath>FrequencyBot.h</itemPath>
       <itemPath>Kraken.h</itemPath>
-      <itemPath>Quanta.h</itemPath>
       <itemPath>Robinhood.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -17,9 +17,9 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Coinbase.cpp</itemPath>
+      <itemPath>FrequencyBot.conf</itemPath>
+      <itemPath>FrequencyBot.cpp</itemPath>
       <itemPath>Kraken.cpp</itemPath>
-      <itemPath>Quanta.cpp</itemPath>
-      <itemPath>QuantaBot.conf</itemPath>
       <itemPath>Robinhood.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -49,15 +49,15 @@
       </item>
       <item path="Coinbase.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FrequencyBot.conf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FrequencyBot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FrequencyBot.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Kraken.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Kraken.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Quanta.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Quanta.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="QuantaBot.conf" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Robinhood.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -90,15 +90,15 @@
       </item>
       <item path="Coinbase.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="FrequencyBot.conf" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="FrequencyBot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="FrequencyBot.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Kraken.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Kraken.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="Quanta.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="Quanta.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="QuantaBot.conf" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Robinhood.cpp" ex="false" tool="1" flavor2="0">
       </item>

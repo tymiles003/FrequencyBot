@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   Quanta.h
+ * File:   FrequencyBot.h
  * Author: johnjmcdonnell
  *
  * Created on January 27, 2018, 11:50 PM
@@ -18,18 +18,17 @@
 
 using namespace std;
 
-class Quanta {
+class FrequencyBot {
 public:
-    Quanta(unsigned short int);
-    Quanta(const Quanta& orig);
-    virtual ~Quanta();
+    FrequencyBot(unsigned short int);
+    FrequencyBot(const FrequencyBot& orig);
+    virtual ~FrequencyBot();
     bool setThreadCount(unsigned short int);
     unsigned short int parseConfig(char * filename);
 private:
     unsigned short int threads = 0;
     string configFile;
-    
 };
 
-#endif /* QUANTA_H */
+#endif /* FREQUENCY_H */
 

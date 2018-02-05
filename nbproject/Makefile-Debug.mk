@@ -36,8 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Coinbase.o \
+	${OBJECTDIR}/FrequencyBot.o \
 	${OBJECTDIR}/Kraken.o \
-	${OBJECTDIR}/Quanta.o \
 	${OBJECTDIR}/Robinhood.o \
 	${OBJECTDIR}/main.o
 
@@ -60,26 +60,26 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/quantabot
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/frequencybot
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/quantabot: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/frequencybot: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/quantabot ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/frequencybot ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/Coinbase.o: Coinbase.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Coinbase.o Coinbase.cpp
 
+${OBJECTDIR}/FrequencyBot.o: FrequencyBot.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/FrequencyBot.o FrequencyBot.cpp
+
 ${OBJECTDIR}/Kraken.o: Kraken.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Kraken.o Kraken.cpp
-
-${OBJECTDIR}/Quanta.o: Quanta.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Quanta.o Quanta.cpp
 
 ${OBJECTDIR}/Robinhood.o: Robinhood.cpp
 	${MKDIR} -p ${OBJECTDIR}

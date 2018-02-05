@@ -5,8 +5,8 @@
  */
 
 /* 
- * File:   Quanta.cpp
- * Author: johnjmcdonnell
+ * File:   Bot.cpp
+ * Author: johnjmcdonnell aka Phrixus Darkstone.
  *              __________
          ______/ ________ \______
        _/      ____________      \_
@@ -24,25 +24,25 @@ __|     \ \                    / /     |__
         \ \   ||.||.||.||.||   / /
          \_   ||_||_||_||_||   _/   Welcome to Paradise.
            \     ........     /
- * QuantaBot
+ * FrequncyBot
  * Created on January 27, 2018, 11:50 PM
  */
 
-#include "Quanta.h"
+#include "FrequencyBot.h"
 
-Quanta::Quanta(unsigned short int threads) {
+FrequencyBot::FrequencyBot(unsigned short int threads) {
     if (this->setThreadCount(threads)) {
-        cout << "New QuantaBot Instantiated...";
+        cout << "New FrequencyBot Instantiated...";
     }
 }
 
-Quanta::Quanta(const Quanta& orig) {
+FrequencyBot::FrequencyBot(const FrequencyBot& orig) {
 }
 
-Quanta::~Quanta() {
+FrequencyBot::~FrequencyBot() {
 }
 
-bool Quanta::setThreadCount(unsigned short int threads) {
+bool FrequencyBot::setThreadCount(unsigned short int threads) {
     if (threads > 0) {
         this->threads = threads;
         return true;
@@ -51,7 +51,7 @@ bool Quanta::setThreadCount(unsigned short int threads) {
     }
 }
 
-unsigned short int Quanta::parseConfig(char * filename) {
+unsigned short int FrequencyBot::parseConfig(char * filename) {
     this->configFile = filename;
     return 0;
 }

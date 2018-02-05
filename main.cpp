@@ -1,6 +1,6 @@
 /* 
- * File:   main.cpp
- * Author: johnjmcdonnell
+ * File:   main.cpp Brain of the FrequencyBot.
+ * Author: johnjmcdonnell aka Phrixus Darkstone.
  *
  * Created on January 27, 2018, 11:48 PM
  */
@@ -11,10 +11,10 @@
 #include <iostream>
 #include <fstream>
 #include <thread>
-#include "Quanta.h"
+#include "FrequencyBot.h"
 
 using namespace std;
-char configFile[] = "QuantaBot.conf";
+char configFile[] = "FrequencyBot.conf";
 
 /*
  * Handle all the arguments and commands passed upon initialization 
@@ -31,7 +31,7 @@ int argumentHandler(unsigned int argc, char * argv[]) {
 
 /*
  * Main expects to be fed the location
- * of the QuantaBot Configuration File.
+ * of the Bot Configuration File.
  * @argc = 1 by Default - We're Expecting @ least 2.
  * @argv location of configuration file.
  * @return true-false boolean integer.
@@ -44,7 +44,7 @@ int main(unsigned int argc, char * argv[]) {
      * Throw an error to the application user.
      */
     if (argc < 1) {
-        std::cout << "@minimum please specify a conf file path to spawn QuantaBot.";
+        std::cout << "@minimum please specify a conf file path to spawn FrequencyBot.";
     } else {
         /*
          * If we get a legit command to spool a bot - do it.
