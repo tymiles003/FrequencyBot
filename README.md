@@ -18,4 +18,4 @@ The idea being to rapidly accumulate wealth by capturing buy and sell activies o
 Stocks, Mutual Funds Etc anything that generates a sine-wave form or other type of frequency wave. 
 
 
-[logo]: https://github.com/Renderlogic/FrequencyBot/edit/master/images/logo.png "FrequencyBot Logo"
+[logo]: https://github.com/Renderlogic/FrequencyBot/blob/development/images/logo.png "FrequencyBot Logo"
