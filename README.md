@@ -1,5 +1,5 @@
 # FrequencyBot
-## A Quantatativly and Qualitative Approach Towards Ending World Povery.
+## A Quantitatively and Qualitative Approach Towards Ending World Poverty.
 ### The FrequencyBot project is a Free and Open Source Trading Bot Platform.
 ---
 
